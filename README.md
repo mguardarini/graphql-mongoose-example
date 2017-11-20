@@ -8,9 +8,9 @@ GraphQL is a query language for your API, and a server-side runtime for executin
 
 Using a node.js server? Just use express-graphql! It can automatically present GraphiQL, if you using another GraphQL service? GraphiQL is relatively easy to set up. With npm:
 
-##### Install the packages: 
+##### Install the packages:
 
-This example implement GraphQL, Mongoose and JWT. 
+This example implement GraphQL, Mongoose and JWT.
 
 ```
 npm install --save express-graphql
@@ -19,21 +19,21 @@ npm install --save express-graphql
 npm install express-jwt
 ```
 ```
-npm install mongoose
+npm install mongoose -save
 ```
+
+### Features implemented:
+
+* GraphQL: &#10004;
+
+  - Mutation.  &#10004;
+  - Queries.  &#10004;
+
+
+* Connection database (Mongodb) with [Mongoose](http://mongoosejs.com/index.html)  &#10004;
 
 ### Features in Development:
 
-* GraphQL: 
-
-  - Mutation.
-  - Queries.
-
-* Connection database (Mongodb) with [Mongoose](http://mongoosejs.com/index.html)
-
 * Implementation of the *express-jwt*
 
-
 **in development...**
-
-
