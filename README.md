@@ -17,7 +17,7 @@ You can install the packages in two ways:
 ```
 npm install
 ```
-If you have errors please install package by package it's not a lot, right? :satisfied:
+If you have errors, please install package by package it's not a lot, right? :satisfied:
 
 ```
 npm install --save express-graphql
@@ -43,7 +43,8 @@ npm install mongoose -save
 
 * Implementation of the *express-jwt*
 
-* Implementation of the Jest Framework for tests [Jest Framework](https://jest-everywhere.now.sh/#/?_k=rhzeyv)
+* Implementation of the Jest Framework for tests (
+[Watch the presentation about Jest Framework of the Sibelius Seraphini](https://jest-everywhere.now.sh/#/?_k=rhzeyv))
 
 * Subscriptions :hushed:
 
