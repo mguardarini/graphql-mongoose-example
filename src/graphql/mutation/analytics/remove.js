@@ -5,29 +5,23 @@ import {
 
 }from "graphql";
 
-import {AnalyticsType} from '../../types/analytics';
+import {analyticsType} from '../../types/analytics';
 import {analitycs} from '../../../database/analytics';
 
 
 export default {
-  deleteAnalytics:{
-    type:AnalyticsType,
+
+    type:analyticsType,
     args:{
-        hardwareId:{type:new GraphQLNonNull(GraphQLID)}
+      _id:{
+        name:"_id",
+        type: new GraphQLNonNull(GraphQLID)
+      }
     },
-  },
-  // type: AnalyticsType,
-  // args:{
-  //   data:{
-  //     hardwareId:'data',
-  //     type: new GraphQLNonNull(GraphQLID)
-  //   }
-  // },
   resolve(root,params){
-    const removedCompany =  analitycs.findByIdAndRemove(params.hardwareId);
+    const removedCompany =  analitycs.findByIdAndRemove(params._id);
     if(!removedCompany){
       throw new Error('erros');
-
     }
     return removedCompany;
   }

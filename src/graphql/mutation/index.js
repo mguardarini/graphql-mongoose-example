@@ -1,5 +1,13 @@
-import analyticsMutation from "./analytics";
+// import analyticsMutation from "./analytics";
+//
+// export default {
+//   analyticsMutation
+// }
+// export default {
+//   ...userMutation,
+//   ...postMutation
+// }
 
-export default {
-  analyticsMutation
-}
+import analyticsMutation from './analytics';
+
+export default analyticsMutation;

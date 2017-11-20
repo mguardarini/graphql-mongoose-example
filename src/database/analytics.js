@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 // create a schema
 const analitycsSchema = new Schema({
-    uid: {type:Number},
+    uid: {type:String},
     hardwareId: {type:String},
     employer: {type:String},
     people_count:{type:Number},

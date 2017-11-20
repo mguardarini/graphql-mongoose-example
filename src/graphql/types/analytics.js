@@ -5,7 +5,8 @@ import {
   GraphQLSchema,
   GraphQLList,
   GraphQLNonNull,
-  GraphQLInputObjectType
+  GraphQLInputObjectType,
+  GraphQLID
 } from 'graphql';
 
 import AnalyticsModel from "../../database/analytics.js";
@@ -17,8 +18,8 @@ export const analyticsType = new GraphQLObjectType({
 
     fields:()=>({
 
-          id:{
-            type:GraphQLInt
+          _id:{
+            type:new GraphQLNonNull(GraphQLID)
           },
           hardwareId:{
             type:GraphQLString
@@ -69,9 +70,6 @@ export const AnalyticsInput = new GraphQLInputObjectType({
       description:"Insert data",
       fields: ()=> ({
 
-        id:{
-          type:GraphQLInt
-        },
         hardwareId:{
           type:GraphQLString
         },

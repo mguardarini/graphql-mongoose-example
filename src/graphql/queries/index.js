@@ -1,5 +1,3 @@
-import AnalyticsQuery from "./analytics";
+import analitycsQuery from "./analytics";
 
-export default {
-  AnalyticsQuery
-};
+export default analitycsQuery;

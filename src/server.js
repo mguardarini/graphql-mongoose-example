@@ -17,6 +17,10 @@ app.use('/graphql',expressGraphQL({
 
 }));
 
+app.get('/', (req, res) => {
+  res.send('My name is Barry Allen, i am the fast man alive..');
+});
+
 app.listen(port, ()=>{
       console.log("Run barry Runnn ",port)
 });

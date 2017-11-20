@@ -1,5 +1,5 @@
-import analitycs from "./analytics.js";
+import analytics from "./analytics";
 
 export default {
-  analitycs
+  analytics
 }
