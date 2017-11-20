@@ -6,8 +6,7 @@ const analitycsSchema = new Schema({
     uid: {type:String},
     hardwareId: {type:String},
     employer: {type:String},
-    people_count:{type:Number},
-    completed: {type:Boolean}
+    people:{type:Number}
 }, {collection:"software"});
 // we need to create a model using it
 export const analitycs = mongoose.model('analitycs', analitycsSchema);
