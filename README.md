@@ -12,6 +12,13 @@ Using a node.js server? Just use express-graphql! It can automatically present G
 
 This example implement GraphQL, Mongoose and JWT.
 
+You can install the packages in two ways:
+
+```
+npm install
+```
+If you have errors please install package by package it's not a lot, right? :satisfied:
+
 ```
 npm install --save express-graphql
 ```
@@ -35,5 +42,9 @@ npm install mongoose -save
 ### Features in Development:
 
 * Implementation of the *express-jwt*
+
+* Implementation of the Jest Framework for tests [Jest Framework](https://jest-everywhere.now.sh/#/?_k=rhzeyv)
+
+* Subscriptions :hushed:
 
 **in development...**
