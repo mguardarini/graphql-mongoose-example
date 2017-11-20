@@ -2,7 +2,7 @@ import {
   GraphQLList
 } from 'graphql'
 
-import {analyticsType} from "../../types";
+import {analyticsType} from "../../types/analytics";
 import {analytics} from "../../../database/analytics.js";
 
 export default {
