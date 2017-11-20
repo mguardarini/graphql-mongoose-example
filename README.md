@@ -20,13 +20,14 @@ npm install
 If you have errors, please install package by package it's not a lot, right? :satisfied:
 
 ```
-npm install --save express-graphql
+$ npm install --save express-graphql
 ```
 ```
-npm install express-jwt
+$ npm install jsonwebtoken
+
 ```
 ```
-npm install mongoose -save
+$ npm install mongoose -save
 ```
 
 ### Features implemented:
@@ -41,10 +42,10 @@ npm install mongoose -save
 
 ### Features in Development:
 
-* Implementation of the *express-jwt*
+* Implementation of the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
 
 * Implementation of the Jest Framework for tests (
-[Watch the presentation about Jest Framework of the Sibelius Seraphini](https://jest-everywhere.now.sh/#/?_k=rhzeyv))
+[Watch the presentation about Jest Framework by Sibelius Seraphini](https://jest-everywhere.now.sh/#/?_k=rhzeyv))
 
 * Subscriptions :hushed:
 
