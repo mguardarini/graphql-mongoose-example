@@ -1,6 +1,9 @@
 import express from 'express';
 import expressGraphQL from 'express-graphql';
-import schema from './schemas/schema.js';
+//import schema from './schemas/schema.js';
+
+import _schema from "./graphql";
+
 import {ConnectDatabase} from "./database/connection.js";
 
 const conn = ConnectDatabase();
@@ -9,7 +12,7 @@ const port = 5600;
 
 app.use('/graphql',expressGraphQL({
 
-      schema:schema,
+      schema:_schema,
       graphiql:true
 
 }));

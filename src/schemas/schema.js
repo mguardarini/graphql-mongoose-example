@@ -24,7 +24,7 @@ const AnalyticsType = new GraphQLObjectType({
 //Root query
 const RootQuery = new GraphQLObjectType ({
 
-    name:"RootQueryType",
+    name:"Query",
     fields:{
       analytics:{
         type:AnalyticsType,

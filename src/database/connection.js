@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export function ConnectDatabase(){
 
-    const promise = mongoose.connect('mongodb://localhost/local', {
+    const promise = mongoose.connect('mongodb://analytics:123456@ds159845.mlab.com:59845/analytics', {
       useMongoClient: true
     });
 
@@ -10,9 +10,8 @@ export function ConnectDatabase(){
 
     db.on('error', ()=> {
         console.log('Failed to connect to mongoose')
-    });
-
-    db.once('open', () => {
+    })
+    .once('open', () => {
         console.log('Connected to mongoose')
     });
 }
