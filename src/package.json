@@ -4,12 +4,12 @@
   "description": "Simple GraphQL server",
   "main": "server.js",
   "scripts": {
-    "dev": "babel-node server.js",
-    "json:server": "json-server --watch data.json"
+    "barry": "babel-node server.js"
   },
   "keywords": [
     "GraphQL",
-    "Express"
+    "Express",
+    "Express JWT"
   ],
   "author": "Mauro Guardarini",
   "license": "MIT",
@@ -25,6 +25,7 @@
     "mongoose": "^4.13.0",
     "node-fetch": "^1.7.3",
     "nodemon": "^1.12.1"
+
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

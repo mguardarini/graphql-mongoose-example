@@ -1,9 +1,7 @@
 import express from 'express';
 import expressGraphQL from 'express-graphql';
-//import schema from './schemas/schema.js';
-
+import jwt from 'jsonwebtoken';
 import _schema from "./graphql";
-
 import {ConnectDatabase} from "./database/connection.js";
 
 const conn = ConnectDatabase();
@@ -17,9 +15,42 @@ app.use('/graphql',expressGraphQL({
 
 }));
 
-app.get('/', (req, res) => {
-  res.send('My name is Barry Allen, i am the fast man alive..');
+app.get ('/api/protected', ensureToken, (req,res)=>{
+  jwt.verify(req.token, 'my_secret_key', (err,req,res)=>{
+    if(err){
+      res.sendStatus(403);
+    }
+    else{
+      res.json({
+        text:"this is protected",
+        data:data
+      })
+    }
+  })
 });
+
+app.post('/mauro', (req, res) => {
+
+        const user = {id:3};
+        const token = jwt.sign({user},'my_secret_key')
+        res.json({
+          token:token
+        })
+});
+
+function ensureToken(req,res,next)
+{
+  const bearerHeader = req.headers["authorization"];
+  if(typeof bearerHeader !== 'undefined'){
+    const bearer = bearerHeader.split(" ");
+    const bearerToken = bearer[1];
+    req.token = bearerToken;
+    next();
+  }
+  else{
+    res.sendStatus(403);
+  }
+}
 
 app.listen(port, ()=>{
       console.log("Run barry Runnn ",port)
