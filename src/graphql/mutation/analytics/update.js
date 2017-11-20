@@ -5,12 +5,12 @@ import {
 
 }from "graphql";
 
-import {AnalyticsType,analyticsInputType} from '../../types/analytics';
+import {analyticsType,analyticsInputType} from '../../types/analytics';
 import {analitycs} from '../../../database/analytics';
 
-export default function update(){
+export default{
 
-  type: AnalyticsType,
+  type: analyticsType,
   args:{
     id:{
       hardwareId:'data',
@@ -18,7 +18,7 @@ export default function update(){
     },
     data:{
       hardwareId:'data',
-      type: new GraphQLNonNull(AnalyticsType)
+      type: new GraphQLNonNull(analyticsType)
     }
   },
   resolve(root,params){
