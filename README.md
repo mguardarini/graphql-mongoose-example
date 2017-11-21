@@ -10,7 +10,7 @@ Using a node.js server? Just use express-graphql! It can automatically present G
 
 ##### Install the packages:
 
-This example implement GraphQL, Mongoose and JWT.
+This example uses GraphQL, Mongoose and JWT.
 
 You can install the packages in two ways:
 
